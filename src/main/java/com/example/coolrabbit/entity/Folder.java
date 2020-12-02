@@ -1,4 +1,4 @@
-package com.example.coderabbit.entity;
+package com.example.coolrabbit.entity;
 
 public class Folder {
     private Integer folderId;

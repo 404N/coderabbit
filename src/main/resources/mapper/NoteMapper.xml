@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.example.coderabbit.dao.NoteMapper">
-  <resultMap id="BaseResultMap" type="com.example.coderabbit.entity.Note">
+<mapper namespace="com.example.coolrabbit.dao.NoteMapper">
+  <resultMap id="BaseResultMap" type="com.example.coolrabbit.entity.Note">
     <id column="note_id" jdbcType="INTEGER" property="noteId" />
     <result column="note_title" jdbcType="VARCHAR" property="noteTitle" />
     <result column="user_id" jdbcType="INTEGER" property="userId" />
@@ -22,7 +22,7 @@
     delete from note
     where note_id = #{noteId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.example.coderabbit.entity.Note">
+  <insert id="insert" parameterType="com.example.coolrabbit.entity.Note">
     insert into note (note_id, note_title, user_id, 
       note_content, is_private, folder_id
       )
@@ -30,7 +30,7 @@
       #{noteContent,jdbcType=VARCHAR}, #{isPrivate,jdbcType=INTEGER}, #{folderId,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.example.coderabbit.entity.Note">
+  <insert id="insertSelective" parameterType="com.example.coolrabbit.entity.Note">
     insert into note
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="noteId != null">
@@ -73,7 +73,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.example.coderabbit.entity.Note">
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.coolrabbit.entity.Note">
     update note
     <set>
       <if test="noteTitle != null">
@@ -94,7 +94,7 @@
     </set>
     where note_id = #{noteId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.example.coderabbit.entity.Note">
+  <update id="updateByPrimaryKey" parameterType="com.example.coolrabbit.entity.Note">
     update note
     set note_title = #{noteTitle,jdbcType=VARCHAR},
       user_id = #{userId,jdbcType=INTEGER},

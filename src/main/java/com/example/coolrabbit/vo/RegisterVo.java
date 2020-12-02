@@ -1,28 +1,18 @@
-package com.example.coderabbit.entity;
+package com.example.coolrabbit.vo;
 
-public class User {
-    private Integer id;
-
+public class RegisterVo {
     private String email;
 
     private String name;
 
     private String password;
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
-        this.email = email == null ? null : email.trim();
+        this.email = email;
     }
 
     public String getName() {
@@ -30,7 +20,7 @@ public class User {
     }
 
     public void setName(String name) {
-        this.name = name == null ? null : name.trim();
+        this.name = name;
     }
 
     public String getPassword() {
@@ -38,6 +28,6 @@ public class User {
     }
 
     public void setPassword(String password) {
-        this.password = password == null ? null : password.trim();
+        this.password = password;
     }
 }

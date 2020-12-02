@@ -1,7 +1,12 @@
-package com.example.coderabbit.dao;
+package com.example.coolrabbit.dao;
 
-import com.example.coderabbit.entity.Folder;
+import com.example.coolrabbit.entity.Folder;
+import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
+@Component
+@Mapper
 public interface FolderMapper {
     int deleteByPrimaryKey(Integer folderId);
 
