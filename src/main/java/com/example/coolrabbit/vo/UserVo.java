@@ -6,6 +6,7 @@ public class UserVo {
     private String name;
 
 
+
     public String getEmail() {
         return email;
     }
@@ -21,5 +22,4 @@ public class UserVo {
     public void setName(String name) {
         this.name = name;
     }
-
 }

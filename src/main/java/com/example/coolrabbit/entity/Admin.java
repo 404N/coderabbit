@@ -3,18 +3,18 @@ package com.example.coolrabbit.entity;
 import java.util.Date;
 import javax.persistence.*;
 
-public class User {
+public class Admin {
     @Id
+    @Column(name = "admin_id")
     @GeneratedValue(generator = "UUID")
-    private String id;
+    private String adminId;
 
-    private String email;
-
-    private String name;
-
-    private String salt;
+    @Column(name = "user_name")
+    private String userName;
 
     private String password;
+
+    private String salt;
 
     @Column(name = "create_time")
     private Date createTime;
@@ -23,59 +23,31 @@ public class User {
     private Date updateTime;
 
     /**
-     * @return id
+     * @return admin_id
      */
-    public String getId() {
-        return id;
+    public String getAdminId() {
+        return adminId;
     }
 
     /**
-     * @param id
+     * @param adminId
      */
-    public void setId(String id) {
-        this.id = id;
+    public void setAdminId(String adminId) {
+        this.adminId = adminId;
     }
 
     /**
-     * @return email
+     * @return user_name
      */
-    public String getEmail() {
-        return email;
+    public String getUserName() {
+        return userName;
     }
 
     /**
-     * @param email
+     * @param userName
      */
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    /**
-     * @return name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @param name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * @return salt
-     */
-    public String getSalt() {
-        return salt;
-    }
-
-    /**
-     * @param salt
-     */
-    public void setSalt(String salt) {
-        this.salt = salt;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     /**
@@ -90,6 +62,20 @@ public class User {
      */
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    /**
+     * @return salt
+     */
+    public String getSalt() {
+        return salt;
+    }
+
+    /**
+     * @param salt
+     */
+    public void setSalt(String salt) {
+        this.salt = salt;
     }
 
     /**
@@ -118,5 +104,9 @@ public class User {
      */
     public void setUpdateTime(Date updateTime) {
         this.updateTime = updateTime;
+    }
+
+    public String getCredentialsSalt(){
+        return this.userName+this.salt;
     }
 }

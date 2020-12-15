@@ -1,26 +1,12 @@
 package com.example.coolrabbit.dao;
 
+import com.example.coolrabbit.core.CustomerMapper;
 import com.example.coolrabbit.entity.User;
-import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-@Component
-@Mapper
-public interface UserMapper {
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(User record);
-
-    int insertSelective(User record);
-
-    User selectByPrimaryKey(Integer id);
-
-    int updateByPrimaryKeySelective(User record);
-
-    int updateByPrimaryKey(User record);
-
+@Service
+public interface UserMapper extends CustomerMapper<User> {
     User selectByEmail(String email);
 
-    User selectByEmailAndPassword(String email,String password);
+    User selectByEmailAndPassword(String email, String password);
 }

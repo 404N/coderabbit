@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.example.coolrabbit.dao.NoteLabelMapper" >
+  <resultMap id="BaseResultMap" type="com.example.coolrabbit.entity.NoteLabel" >
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="note_id" property="noteId" jdbcType="VARCHAR" />
+    <id column="label_id" property="labelId" jdbcType="VARCHAR" />
+  </resultMap>
+</mapper>

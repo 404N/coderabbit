@@ -43,4 +43,10 @@ public class UserServiceImpl implements UserService {
         userVo.setName(user.getName());
         return userVo;
     }
+
+    @Override
+    public void setNickName(String name) {
+
+    }
+
 }

@@ -10,7 +10,7 @@ public interface UserService {
 
     /**
      * 注册接口
-     * @param userVo
+     * @param registerVo
      */
     void register(RegisterVo registerVo);
 
@@ -19,5 +19,13 @@ public interface UserService {
      * @param loginVo
      */
     UserVo login(LoginVo loginVo);
+
+
+    /**
+     * 设置昵称
+     * @param name
+     */
+    void setNickName(String name);
+
 
 }
