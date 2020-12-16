@@ -5,8 +5,9 @@ import com.example.coolrabbit.entity.Admin;
 import com.example.coolrabbit.service.AdminService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class AdminServiceImpl implements AdminService {
     final AdminMapper adminMapper;
 

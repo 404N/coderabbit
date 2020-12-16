@@ -9,9 +9,11 @@ import com.example.coolrabbit.utils.MD5Util;
 import com.example.coolrabbit.vo.LoginVo;
 import com.example.coolrabbit.vo.RegisterVo;
 import com.example.coolrabbit.vo.UserVo;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-@Component
+@Service
 public class UserServiceImpl implements UserService {
 
     final UserMapper userMapper;
