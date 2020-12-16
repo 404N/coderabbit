@@ -51,4 +51,8 @@ public class UserServiceImpl implements UserService {
 
     }
 
+    @Override
+    public User findByUserName(String username) {
+        return userMapper.selectByEmail(username);
+    }
 }
